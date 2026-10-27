@@ -1,4 +1,5 @@
 using System;
+using System.Linq.Expressions;
 
 class Program
 {
@@ -31,8 +32,35 @@ class Program
         {
             letra = "F";
         }
+        // Determinar o sinal da nota
+        int ultimoDigito = percentual % 10;
+        string sinal = "";
 
-        Console.WriteLine($"Sua nota é: {letra}");
+        if (ultimoDigito >= 7)
+        {
+            sinal = "+";
+        }
+        else if (ultimoDigito < 3)
+        {
+            sinal = "-";
+        }
+        // Tratar as exceções
+
+        if (letra == "A" && sinal == "+")
+        {
+            sinal = "";
+        }
+
+        if (letra == "F")
+        {
+            sinal = "";
+        }
+
+        // Exiba a nota
+
+        Console.WriteLine($"Sua nota é: {letra} {sinal}");
+
+        // Verifica aprovação
 
         if (percentual >= 70)
         {
