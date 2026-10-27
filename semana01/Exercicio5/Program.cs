@@ -2,6 +2,7 @@ using System;
 
 class Program
 {
+    // Funções
     static void Main(string[] args)
     {
         ExibirMensagemBoasVindas();
