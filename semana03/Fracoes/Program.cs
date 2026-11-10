@@ -1,9 +1,27 @@
+//Importação
 using System;
 
+//Classe Program e método Main
 class Program
 {
+    //static void Main(string[] args): é o ponto de entrada da aplicação. 
+    // É onde o programa começa a executar.
     static void Main(string[] args)
     {
-        Console.WriteLine("Olá, Mundo! Este é o Projeto Fracoes.");
+        Fracao f1 = new Fracao();
+        Console.WriteLine(f1.ObterFracaoEmTexto());
+        Console.WriteLine(f1.ObterFracaoEmDecimal());
+
+        Fracao f2 = new Fracao(5);
+        Console.WriteLine(f2.ObterFracaoEmTexto());
+        Console.WriteLine(f2.ObterFracaoEmDecimal());
+
+        Fracao f3 = new Fracao(3, 4);
+        Console.WriteLine(f3.ObterFracaoEmTexto());
+        Console.WriteLine(f3.ObterFracaoEmDecimal());
+
+        Fracao f4 = new Fracao(1, 3);
+        Console.WriteLine(f4.ObterFracaoEmTexto());
+        Console.WriteLine(f4.ObterFracaoEmDecimal());
     }
 }
